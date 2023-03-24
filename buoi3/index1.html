@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index1.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container_header {
+            display: flex;
+            transition: all 0.5s ease 0s;
+            background-color: rgb(55, 81, 126);
+            padding-left: 100px;
+            padding-right: 100px;
+            color: white;
+            height: 70px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container_header--logo a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 30px;
+            line-height: 1;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .menu1 li a {
+            display: flex;
+            align-items: center !important;
+            justify-content: space-between;
+            padding: 10px 0 10px 30px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .container_header--content {
+            display: flex;
+        }
+
+        .container_header--content--menu li a:hover {
+            color: #47b2e4;
+        }
+
+        .container_header--content--menu {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            position: relative;
+        }
+
+        .fa-solid {
+            padding-left: 5px;
+        }
+
+        .fa-chevron-right {
+            padding-right: 20px;
+        }
+
+        .menu2 {
+            display: none;
+            background-color: #fff;
+            list-style: none;
+            width: 200px;
+        }
+
+        .menu2 li a {
+            color: #141313 !important;
+            text-decoration: none;
+            font-weight: 500;
+            color: #0c3c53;
+        }
+
+        .menu2 li a:hover {
+            color: #31a9e1 !important;
+            ;
+        }
+
+        .menu1>.dropdown:hover>.menu2 {
+            display: block !important;
+            position: absolute;
+            top: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0 30px rgba(127, 137, 161, .25);
+        }
+
+        .menu3 {
+            list-style: none;
+            width: 100%;
+            display: none;
+            background-color: #fff;
+        }
+
+        .menu2 .deep_dropdown:hover .menu3 {
+            display: block !important;
+            top: 20%;
+            left: 100%;
+            position: absolute;
+            border-radius: 5px;
+            box-shadow: 0 0 30px rgba(127, 137, 161, .25);
+        }
+
+        .container_header--content--menu2--button {
+            border: 2px solid #47b2e4;
+            border-radius: 50px;
+            font-size: 10px;
+            font-weight: 800;
+            margin-left: 30px;
+            padding: 8px 20px !important;
+        }
+
+        .buttonstarted:hover {
+            color: #fff !important;
+            background: #31a9e1;
+        }
+
+        .banner {
+            display: flex;
+            width: 100% !important;
+            height: 75vh;
+            background: #37517e;
+            padding: 0px 100px 0 100px;
+            text-align: left;
+        }
+
+        .banner__left {
+            display: flex;
+            flex-direction: column;
+            padding-right: 20px;
+            padding-top: 100px;
+            height: auto;
+        }
+
+        .banner__left h1 {
+            margin: 0 0 10px 0;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 56px;
+            color: #fff;
+
+        }
+        .banner__left h2 {
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 50px;
+            font-size: 24px;
+        }
+
+        .banner__left--bottom {
+            display: flex;
+            align-items: center !important;
+            padding: 10px 28px 11px 0px;
+            justify-content: flex-start !important;
+        }
+
+        .banner__left--bottom a {
+            padding-top: 10px !important;
+
+        }
+
+        .banner__left--bottom .started {
+            font-family: "Jost", sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: inline-block;
+            border-radius: 50px;
+            margin: 10px 0 0 0;
+            color: #fff;
+            background: #47b2e4;
+        }
+
+        .started:hover {
+            background: #209dd8;
+        }
+
+        .started1 {
+            margin-left: 30px;
+            font-family: "Jost", sans-serif;
+            display: flex;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 1px;
+            align-items: center !important;
+            justify-content: center;
+            color: #fff;
+            border: 0;
+            background: rgb(55, 81, 126) !important;
+        }
+
+        .fa-regular {
+            color: #fff;
+            font-size: 30px;
+            margin-right: 10px;
+        }
+
+        .fa-regular:hover {
+            color: #47b2e4;
+        }
+
+        .banner__right--img {
+            width: 100%;
+            height: auto;
+            animation: up-down 2s ease-in-out infinite alternate-reverse both;
+            animation-name: tmp;
+        }
+
+        @keyframes tmp {
+            0% {
+                transform: translate(0px, 50px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container_header">
+        <h1 class="container_header--logo">
+            <a href="index.html">Arsha</a>
+        </h1>
+        <div class="container_header--content">
+            <ul class="container_header--content--menu menu1">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#/">Team</a></li>
+                <li class="dropdown">
+                    <a href="#">Drop Down
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="container_header--content--menu2 menu2">
+                        <li><a href="#">Drop Down 1</a></li>
+                        <li class="deep_dropdown">
+                            <a href="#">Deep Drop Down
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="menu3">
+                                <li><a href="#">Deep Drop Down 1</a></li>
+                                <li><a href="#">Deep Drop Down 2</a></li>
+                                <li><a href="#">Deep Drop Down 3</a></li>
+                                <li><a href="#">Deep Drop Down 4</a></li>
+                                <li><a href="#">Deep Drop Down 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Drop Down 2</a></li>
+                        <li><a href="#">Drop Down 3</a></li>
+                        <li><a href="#">Drop Down 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li class="getstarted"><a href="#" class="container_header--content--menu2--button buttonstarted">Get
+                        Started</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="banner__left">
+            <h1>Better Solutions For Your Business</h1>
+            <h2>We are team of talented designers making websites with Bootstrap</h2>
+            <div class="banner__left--bottom ">
+                <a href="#" class="container_header--content--menu2--button started">Get Started</a>
+                <a href="https://www.youtube.com/watch?v=yGD_vo2C5Ec" class="started1">
+                    <i class="fa-regular fa-circle-play"></i>
+                    <span class="watch--video">Watch Video</span>
+                </a>
+            </div>
+        </div>
+        <div class="banner__right">
+            <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/hero-img.png" class="banner__right--img"></img>
+        </div>
+    </div>
+</body>
+
+</html>
