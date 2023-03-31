@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1;
+    text-align: center;
+}
+
+.title,
+.price,
+.description,
+.img,
+.rating {
+    padding: 10px;
+    text-align: center;
+    color: red;
+    font-size: 20px;
+}
+/* td{
+    padding-bottom: 20px;
+} */
+.title {
+    width: 200px;
+}
+
+.price {
+    width: 100px;
+}
+
+.description {
+    width: 600px;
+}
+
+.img {
+    width: 100px;
+}
+td{
+    text-align: center;
+}
