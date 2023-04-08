@@ -10,8 +10,7 @@
 </head>
 
 <body>
-    <%-include('./header')%>
-    <form class="form_input">
+    <form class="form_input" method="POST" action="/products">
         <label for="Content">Nhập Thông Tin Sản Phâm</label>
         <table class="form_input-products">
             <tr>
@@ -20,7 +19,7 @@
             </tr>
             <tr>
                 <td><label for="price">Price</label></td>
-                <td><input type="text" name="price" id="price"></td>
+                <td><input type="number" name="price" id="price"></td>
             </tr>
             <tr>
                 <td><label for="description">Description</label></td>
@@ -39,7 +38,6 @@
         </table>
         <button type="submit" class="button">Click Nhập</button>
     </form>
-    <%- include('footer.ejs')%>
 </body>
 
 </html>
